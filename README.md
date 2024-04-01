@@ -20,6 +20,7 @@ firewall-cmd --permanent --new-ipset=jp --type=hash:net
 firewall-cmd --permanent --ipset=jp --add-entries-from-file=./jpips
 # 新規作成したipsetをゾーンに追加
 firewall-cmd --permanent --zone=jp --add-source=ipset:jp
+firewall-cmd --reload
 ```
 
 ### アドレス一覧の更新
